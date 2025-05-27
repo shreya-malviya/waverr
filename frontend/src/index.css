@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    scroll-behavior: smooth;
+}
+@layer utilities {
+    .text-glow {
+        text-shadow: 0 0 5px rgba(0, 255, 255, 0.6), 0 0 10px rgba(0, 255, 255, 0.6);
+    }
+    }
+
+    body{
+        overflow-x:hidden;
+        margin:0;
+        padding:0;
+    }
+
+    /* for nicer scroll experience */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+  }
+
+body{
+    background-color: #FFFF;
+}

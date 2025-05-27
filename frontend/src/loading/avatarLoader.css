@@ -1,0 +1,53 @@
+/* From Uiverse.io by cohencoo - Responsive version */
+.custom-loader {
+  width: clamp(40px, 10vw, 70px);
+  height: clamp(40px, 10vw, 70px);
+  background: #74D4FF;
+  border-radius: 50%;
+  mask: 
+    radial-gradient(circle at 50% calc(100% + 13px), #000 95%, transparent) top 4px left 50%,
+    radial-gradient(circle, #000 95%, transparent) center,
+    radial-gradient(circle at 50% -13px, #000 95%, transparent) bottom 4px left 50%,
+    linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  -webkit-mask: 
+    radial-gradient(circle at 50% calc(100% + 13px), #000 95%, transparent) top 4px left 50%,
+    radial-gradient(circle, #000 95%, transparent) center,
+    radial-gradient(circle at 50% -13px, #000 95%, transparent) bottom 4px left 50%,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  animation: cu10 1.5s infinite;
+}
+
+@keyframes cu10 {
+  0% {
+    -webkit-mask-size: 0 18px, 0 18px, 0 18px, auto;
+            mask-size: 0 18px, 0 18px, 0 18px, auto;
+  }
+  16.67% {
+    -webkit-mask-size: 100% 18px, 0 18px, 0 18px, auto;
+            mask-size: 100% 18px, 0 18px, 0 18px, auto;
+  }
+  33.33% {
+    -webkit-mask-size: 100% 18px, 100% 18px, 0 18px, auto;
+            mask-size: 100% 18px, 100% 18px, 0 18px, auto;
+  }
+  50% {
+    -webkit-mask-size: 100% 18px, 100% 18px, 100% 18px, auto;
+            mask-size: 100% 18px, 100% 18px, 100% 18px, auto;
+  }
+  66.67% {
+    -webkit-mask-size: 0 18px, 100% 18px, 100% 18px, auto;
+            mask-size: 0 18px, 100% 18px, 100% 18px, auto;
+  }
+  83.33% {
+    -webkit-mask-size: 0 18px, 0 18px, 100% 18px, auto;
+            mask-size: 0 18px, 0 18px, 100% 18px, auto;
+  }
+  100% {
+    -webkit-mask-size: 0 18px, 0 18px, 0 18px, auto;
+            mask-size: 0 18px, 0 18px, 0 18px, auto;
+  }
+}
